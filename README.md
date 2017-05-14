@@ -27,4 +27,4 @@ Option 1: The player should create two in a row to force the opponent into defen
     Empty side: The player plays in a middle square on any of the 4 sides.
 
   ->  Here is my link for the TTTboard https://teelatictactoe.herokuapp.com/
-# Tic_Tac_Toe_n_x_n
+# Tic_Tac_Toe_4_x_4
