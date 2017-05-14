@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>App TicTacToe</title>
+        <link href ="css/styles.css" rel ="stylesheet">
+    </head>
+    <body>
+        <div class ="wrapper">
+            <img class ="logo" css/src="ttt.png"> 
+            <h1 class ="topic">Wellcome To TicTacToe</h1>
+            <hr><hr>
+            <br>
+            <ul>
+                <l class="bold"><h2>Human Section</h2></l>
+                <li><a id ="pp" href="/playervsplayer">Player vs Player</a></li>
+                <li><a id ="ps" href="/playervsseq">Player vs Easy</a></li>
+                <li><a id ="pr" href="/playervsrandom">Player vs Medium</a></li>
+                <li><a id ="pu" href="/playervsunbeatable">Player vs Impossible</a></li>
+                <l class="bold"><h2>Play Again</h2></l>
+                <a href="/"><h3>Reset</h3></a>
+            </ul>
+            <div>
+            <%= yield %>
+            </div>
+            <footer><center>TeelaTTTBoard.org</center></footer>
+        </div>
+        </div>
+    </body>
+</html>

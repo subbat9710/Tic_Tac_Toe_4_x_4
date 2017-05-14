@@ -1,0 +1,23 @@
+<h3><%= game_msg %></h3>
+
+<form method="post" action="get_random_move">
+<input class="aisubmit" type="submit" name="submit" value="Make a Move">
+</form>
+
+<table id='board'>
+    <tr>
+        <td id='top-left'><%= board[0] %></td>
+        <td id='top-center'><%= board[1] %></td>
+        <td id='top-right'><%= board[2] %></td>
+    </tr>
+    <tr>
+        <td id='middle-left'><%= board[3] %></td>
+        <td id='center'><%= board[4] %></td>
+        <td id='middle-right'><%= board[5] %></td>
+    </tr>
+    <tr>
+        <td id='bottom-left'><%= board[6] %></td>
+        <td id='bottom-center'><%= board[7] %></td>
+        <td id='bottom-right'><%= board[8] %></td>
+    </tr>
+</table>
