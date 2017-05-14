@@ -1,6 +1,6 @@
 require_relative "console.rb"
 
-board = Board.new
+board = Board.new(4)
 player1 = Player.new("Teela", "x")
 player2 = Unbeatable.new("o")
 console = Console.new(board, player1, player2)

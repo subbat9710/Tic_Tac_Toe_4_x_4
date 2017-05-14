@@ -7,20 +7,22 @@ require_relative "unbeatable.rb"
 class Console
 	attr_accessor :board, :name, :currentplayer, :player1, :player2
 
-	def initialize(board, player1, player2)
+	 def initialize(board, player1, player2)
 	    @board = board
-	 	@player1 = player1
+	    @player1 = player1
         @player2 = player2
         @currentplayer = player2
     end
 
 	def display_board(board)  #display the whole tictactoe board 
 		puts "\n
-		     #{board[0]}  |  #{board[1]}  |  #{board[2]}\n
+		     #{board[0]}  |  #{board[1]}  |  #{board[2]} |  #{board[3]}\n
 		     -------------
-		     #{board[3]}  |  #{board[4]}  |  #{board[5]}\n
+		     #{board[4]}  |  #{board[5]}  |  #{board[6]} |  #{board[7]}\n
 		     -------------
-		     #{board[6]}  |  #{board[7]}  |  #{board[8]}\n\n"  
+		     #{board[8]}  |  #{board[9]}  |  #{board[10]} |  #{board[11]}\n
+                    -------------
+                    #{board[12]}  |  #{board[13]}  |  #{board[14]} |  #{board[15]}\n\n"  
     end 
     
     def switch_player(currentplayer)
@@ -46,8 +48,8 @@ class Console
     end
 end
     # console = Console.new
-    # board = Board.new
+    # board = Board.new(4)
     # board.set_position(1, "x")
-    # #p board.board 
+    # p board.board 
 
-    # console.display_board(board.board)
+    #console.display_board(board.board)
