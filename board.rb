@@ -23,21 +23,21 @@ class Board
     end
     def stub_winner? #check if player won the game
         winner = false
-        win_array = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+        win_array = [[0, 1, 2, 3],[4, 5, 6, 7],[8, 9, 10, 11],[12, 13, 14, 15],[0, 4, 8, 12],[1, 5, 9, 13],[2, 6, 10, 14],[3, 7, 11, 15],[0, 5, 10, 15],[3, 6, 9, 12]]
         win_array.each do |index|
             x_counter = 0
             o_counter = 0
             index.each do |index_check|
-                if @board[index_check] == "X"  #check for X in board
+                if @board[index_check] == "x"  #check for X in board
                     x_counter += 1
-                elsif @board[index_check] == "O" #check for O in board
+                elsif @board[index_check] == "o" #check for O in board
                     o_counter += 1
                 end
-                if x_counter == 3
-                    @winner_of_game = "X"
+                if x_counter == 4
+                    @winner_of_game = "x"
                     winner = true
-                elsif o_counter == 3
-                    @winner_of_game = "O"
+                elsif o_counter == 4
+                    @winner_of_game = "o"
                     winner = true
                 end
             end
