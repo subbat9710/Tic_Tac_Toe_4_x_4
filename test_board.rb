@@ -70,25 +70,25 @@ class TestBoard < Minitest::Test
         result = board.check_position?(4)
 		assert_equal(false, result)
     end
-    
+
     def test_for_spot_is_open
 		board = Board.new(4)
         board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
 		result = board.check_position?(3)
 		assert_equal(true, result)
     end
- #    def test_for_all_spot_full
- #    	board = Board.new(4)
- #    	board.board = ["x", "o", "x", "x", "o", "x", "x", "x", "x"]
- #    	result = board.check_full?
- #    	assert_equal(true, result)
- #    end
- #    def test_full_board_equals_game_over
- #    	board = Board.new(4)
- #    	board.board = ["x", "o", "o", "o", "o", "x", "x", "x", "x"]
- #    	result = board.check_full?
- #        assert_equal(true, result)
- #    end
+    def test_for_all_spot_full
+    	board = Board.new(4)
+    	board.board = ["x", "o", "x", "x", "o", "x", "x", "x", "x", "x", "o", "x", "x", "o", "x", "x"]
+    	result = board.check_full?
+    	assert_equal(true, result)
+    end
+    def test_full_board_equals_game_over
+    	board = Board.new(4)
+    	board.board = ["x", "o", "o", "o", "o", "x", "x", "x", "x", "x", "o", "x", "x", "o", "x", "x"]
+    	result = board.check_full?
+        assert_equal(true, result)
+    end
  #    def test_board_is_almost_full
  #    	board = Board.new(4)
  #    	board.board = ["x", "x", "o", "o", "o", "", "x", "x", "x"]
