@@ -113,16 +113,16 @@ class TestBoard < Minitest::Test
     	result = board.stub_winner?
     	assert_equal(true, result)
     end
- #    def test_for_winner_third_row
- #    	board = Board.new(4)
- #    	board.board = ["x", "0", "", "0", "", "o", "x", "x", "x"]
- #    	result = board.stub_winner?
- #    	assert_equal(true, result)
- #    end
- #    def test_for_tie
- #    	board = Board.new(4)
- #    	board.board = ["x", "0", "x", "o", "x", "x", "o", "x", "o"]
- #    	result = board.stub_winner?
- #    	assert_equal(true, result)
- #    end
+    def test_for_winner_third_row
+    	board = Board.new(4)
+    	board.board = ["x", "", "x", "", "o", "", "o", "o", "", "x", "", "", "x", "x", "x", "x"]
+    	result = board.stub_winner?
+    	assert_equal(true, result)
+    end
+    def test_for_tie
+    	board = Board.new(4)
+    	board.board = ["x", "o", "x", "o", "x", "o", "x", "o", "x", "o", "x", "o", "x", "o", "x", "o"]
+    	result = board.stub_winner?
+    	assert_equal(true, result)
+    end
 end
