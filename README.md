@@ -1,7 +1,7 @@
 # TTTboard
--- Project: Creating a Tic Tac Toe Game ---
+-- Project: Creating a Tic Tac Toe Game of size 4x4---
 
-Setting up the Tic Tac Toe Game.
+Setting up the Tic Tac Toe Game with size 4x4
 
 1 Setup the board
 
