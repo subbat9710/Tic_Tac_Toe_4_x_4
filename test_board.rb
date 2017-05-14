@@ -9,66 +9,74 @@ class TestBoard < Minitest::Test
 		assert_equal(result, board.board)
 	end
     
-	# def test_2_update_first_position_with_x
-	# 	board = Board.new(4)
-	# 	board.set_position(0, "x")
-	# 	result = ["x", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-	# 	assert_equal(result, board.board)
- #    end
- #    def test_o_for_the_ninth_position
-	# 	board = Board.new(4)
-	# 	board.set_position(0, "x")
-	# 	board.set_position(8, "o")
- #        result = ["x", "", "", "", "", "", "", "", "o", "", "", "", "", "", "", ""]
-	# 	assert_equal(result, board.board)
- #    end
- #    def test_o_for_the_fifteen_position_and_x_for_first
-	# 	board = Board.new(4)
-	# 	board.set_position(0, "x")
-	# 	board.set_position(14, "o")
-	# 	result = ["x", "", "", "", "", "", "", "", "", "", "", "", "", "", "o", ""]
-	# 	assert_equal(result, board.board)
- #    end
- #    def test_for_x_for_the_fifteenth_position_o_at_fifth
-	# 	board = Board.new(4)
- #        board.board = ["x", "", "", "", "o", "", "", "", "", "", "", "", "", "", "", ""]
-	# 	board.set_position(14, "x")
- #        result = ["x", "", "", "", "o", "", "", "", "", "", "", "", "", "", "x", ""]
-	# 	assert_equal(result, board.board)
- #    end
- #    def test_for_x_for_the_third_position_o_at_seventh
-	# 	board = Board.new(4)
- #        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
-	# 	board.set_position(2, "x")
- #        result = ["x", "", "x", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
-	# 	assert_equal(result, board.board)
- #    end
- #    def test_for_0_for_fifteenth_position
-	# 	board = Board.new(4)
- #        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
-	# 	board.set_position(14, "x")
- #        result = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "x", ""]
-	# 	assert_equal(result, board.board)
- #    end
- #    def test_for_0_for_fourteenth_position
-	# 	board = Board.new(4)
- #        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
-	# 	board.set_position(13, "x")
- #        result = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "x", "", ""]
-	# 	assert_equal(result, board.board)
-	# end
- #    def test_for_spot_already_taken
-	# 	board = Board.new(4)
- #        board.board = ["x", "", "", "", "o", "", "", "", "", "", "", "", "", "", "", ""]
- #        result = board.check_position?(4)
-	# 	assert_equal(false, result)
- #    end
- #    def test_for_spot_is_open
-	# 	board = Board.new(4)
- #        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
-	# 	result = board.check_position?(3)
-	# 	assert_equal(true, result)
- #    end
+	def test_2_update_first_position_with_x
+		board = Board.new(4)
+		board.set_position(0, "x")
+		result = ["x", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+		assert_equal(result, board.board)
+    end
+
+    def test_o_for_the_ninth_position
+		board = Board.new(4)
+		board.set_position(0, "x")
+		board.set_position(8, "o")
+        result = ["x", "", "", "", "", "", "", "", "o", "", "", "", "", "", "", ""]
+		assert_equal(result, board.board)
+    end
+
+    def test_o_for_the_fifteen_position_and_x_for_first
+		board = Board.new(4)
+		board.set_position(0, "x")
+		board.set_position(14, "o")
+		result = ["x", "", "", "", "", "", "", "", "", "", "", "", "", "", "o", ""]
+		assert_equal(result, board.board)
+    end
+
+    def test_for_x_for_the_fifteenth_position_o_at_fifth
+		board = Board.new(4)
+        board.board = ["x", "", "", "", "o", "", "", "", "", "", "", "", "", "", "", ""]
+		board.set_position(14, "x")
+        result = ["x", "", "", "", "o", "", "", "", "", "", "", "", "", "", "x", ""]
+		assert_equal(result, board.board)
+    end
+
+    def test_for_x_for_the_third_position_o_at_seventh
+		board = Board.new(4)
+        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
+		board.set_position(2, "x")
+        result = ["x", "", "x", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
+		assert_equal(result, board.board)
+    end
+
+    def test_for_0_for_fifteenth_position
+		board = Board.new(4)
+        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
+		board.set_position(14, "x")
+        result = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "x", ""]
+		assert_equal(result, board.board)
+    end
+
+    def test_for_0_for_fourteenth_position
+		board = Board.new(4)
+        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
+		board.set_position(13, "x")
+        result = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "x", "", ""]
+		assert_equal(result, board.board)
+	end
+
+    def test_for_spot_already_taken
+		board = Board.new(4)
+        board.board = ["x", "", "", "", "o", "", "", "", "", "", "", "", "", "", "", ""]
+        result = board.check_position?(4)
+		assert_equal(false, result)
+    end
+    
+    def test_for_spot_is_open
+		board = Board.new(4)
+        board.board = ["x", "", "", "", "", "", "o", "", "", "", "", "", "", "", "", ""]
+		result = board.check_position?(3)
+		assert_equal(true, result)
+    end
  #    def test_for_all_spot_full
  #    	board = Board.new(4)
  #    	board.board = ["x", "o", "x", "x", "o", "x", "x", "x", "x"]
