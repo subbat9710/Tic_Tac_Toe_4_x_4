@@ -89,12 +89,12 @@ class TestBoard < Minitest::Test
     	result = board.check_full?
         assert_equal(true, result)
     end
- #    def test_board_is_almost_full
- #    	board = Board.new(4)
- #    	board.board = ["x", "x", "o", "o", "o", "", "x", "x", "x"]
- #    	result = board.check_full?
- #    	assert_equal(false, result)
- #    end
+    def test_board_is_almost_full
+    	board = Board.new(4)
+    	board.board = ["x", "x", "o", "o", "o", "", "x", "x", "x", "x", "o", "x", "x", "o", "x", "x"]
+    	result = board.check_full?
+    	assert_equal(false, result)
+    end
  #    def test_empty_board
  #    	board = Board.new(4)
  #    	board.board = ["", "", "", "", "", "", "", "", ""]
