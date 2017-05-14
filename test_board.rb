@@ -95,12 +95,12 @@ class TestBoard < Minitest::Test
     	result = board.check_full?
     	assert_equal(false, result)
     end
- #    def test_empty_board
- #    	board = Board.new(4)
- #    	board.board = ["", "", "", "", "", "", "", "", ""]
- #    	result = board.check_full?
- #    	assert_equal(false, result)
- #    end
+    def test_empty_board
+    	board = Board.new(4)
+    	board.board = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    	result = board.check_full?
+    	assert_equal(false, result)
+    end
  #    def test_for_winner_first_row
  #    	board = Board.new(4)
  #    	board.board = [["x", "x", "x"], ["0", "", "o"], ["x", "o", "x"]]
