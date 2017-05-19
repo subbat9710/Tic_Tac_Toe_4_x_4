@@ -8,7 +8,19 @@ class TestBoard < Minitest::Test
         result = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]  
 		assert_equal(result, board.board)
 	end
+
+    def test_for_create_3x3_board
+        board = Board.new(3)   
+        result = ["", "", "", "", "", "", "", "", ""]  
+        assert_equal(result, board.board)
+    end
     
+    def test_for_create_5x5_board
+        board = Board.new(5)   
+        result = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]  
+        assert_equal(result, board.board)
+    end
+
 	def test_2_update_first_position_with_x
 		board = Board.new(4)
 		board.set_position(0, "x")

@@ -8,7 +8,7 @@ require_relative 'unbeatable.rb'
 enable :sessions
 
     get '/' do 
-	    session[:board] = Board.new
+	    session[:board] = Board.new(4)
 	    erb :tictactoe, :locals => {:board => session[:board].board}
 	end
 
