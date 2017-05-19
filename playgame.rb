@@ -5,6 +5,9 @@ player1 = Player.new("Teela", "x")
 player2 = Unbeatable.new("o")
 console = Console.new(board, player1, player2)
 
+puts "Choose a board"
+choose = gets.chomp.to_i
+
 while !console.game_over? #while game is not over it continue palying
     console.switch_player(console.currentplayer) 
     move = console.get_move(board.board)

@@ -21,8 +21,8 @@ class Console
 		     #{board[4]}  |  #{board[5]}  |  #{board[6]} |  #{board[7]}\n
 		     -------------
 		     #{board[8]}  |  #{board[9]}  |  #{board[10]} |  #{board[11]}\n
-                    -------------
-                    #{board[12]}  |  #{board[13]}  |  #{board[14]} |  #{board[15]}\n\n"  
+                     -------------
+                     #{board[12]}  |  #{board[13]}  |  #{board[14]} |  #{board[15]}\n\n"  
     end 
     
     def switch_player(currentplayer)
