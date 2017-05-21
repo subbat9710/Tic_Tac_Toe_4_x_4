@@ -12,6 +12,9 @@ Setting up Tic Tac Toe Game with size nxn
 4 Check whether the boad is full or not
 
 5 If boad is full and check for winner, loser and tie
+   ->To run the app, try $ ruby app.rb in your terminal.
+
+   -> rackup required to load on port 4567(mac)
 
 Basic strategy for Unbeatable Tic Tac Toe games
 =======
